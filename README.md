@@ -1,1 +1,1 @@
-# JS-Typing-Speed-Checker
+# JS-Typing Speed Checker
