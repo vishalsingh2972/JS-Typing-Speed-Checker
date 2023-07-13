@@ -82,10 +82,10 @@
     if(actualWords !== 0){
       let typing_speed = (actualWords / time_taken) * 60;
       typing_speed = Math.round(typing_speed);
-      score.innerHTML = `Your typing speed is ${typing_speed} words per minute, you wrote ${actualWords} correct words out of ${sentence_to_write.length} & took ${time_taken} sec for typing`;
+      score.innerHTML = `Your typing speed is ${typing_speed} words per minute, you wrote ${actualWords} correct words out of ${sentence_to_write.length} words & took ${time_taken} sec for typing`;
     }
     else{
-      score.innerHTML = `Your typing speed is 0 words per minute, and you took ${time_taken} sec basically doing nothing`
+      score.innerHTML = `Your typing speed is 0 words per minute as you did not write anything, you took ${time_taken} sec for nothing`
     }
  }
 
