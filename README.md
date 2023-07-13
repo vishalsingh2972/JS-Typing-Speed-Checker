@@ -8,7 +8,7 @@ It was a fun transition from using typing speed checkers to building one from sc
 ## Ideas for Future Updates
 The project is still under development, and there are a number of features that I would like to add in the future. These features include:
 
-- ```Randomized Sentences``` : Instead of using the same sentence every time, fetch random sentences from an API. This will add variety and replayability to the game.
+- ```Randomized Sentences``` : Instead of using the same known sentences every time, fetch random sentences from an API. This will add variety and replayability to the game.
 - ```Different difficulty levels``` : Create different difficulty levels by changing the length of the quotes, the speed at which they are displayed, and the number of errors allowed.
 - ```Leaderboards``` : Create a leaderboard to track the scores of players over time. This can help players to compete with each other and improve their typing speed.
 - ```Progress tracking``` : track the progress of players over time by showing them their average typing speed and accuracy. This can help players to see how they are improving and motivate them to keep practicing. Additionally can also add functinality to allow players to earn points as they progress in the game.
