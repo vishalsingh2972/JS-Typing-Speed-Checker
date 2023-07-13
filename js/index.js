@@ -7,9 +7,9 @@
  const show_sentence = document.querySelector('#showSentence');
  const show_time = document.querySelector('#show-time');
 
- let startTime, endTime, totalTimeTaken;
+ let startTime, endTime, totalTimeTaken, sentence_to_write;
 
- const sentences = ['The quick brown fox jumps 1', 'The quick brown fox jumps 2', 'The quick brown fox jumps 3'];
+ const sentences = ['The moment you become aware, you are free', 'The best way to find yourself is to lose yourself in the service of others', 'The only way to reach your goals is to never give up'];
 
  let intervalID, elapsedTime = 0;
 
@@ -31,7 +31,7 @@
  const startTypingTest = () => {
     let randomNumber = Math.floor(Math.random() * sentences.length);
     show_sentence.innerHTML = sentences[randomNumber];
-    //console.log(show_sentence.innerHTML);
+    //console.log(show_sentence);
 
     let date = new Date();
     startTime = date.getTime();
@@ -51,28 +51,38 @@
    
     calculateTypingSpeed(totalTimeTaken);
 
-    show_sentence.innerHTML = 'filhal kuch nahi likha hain aapne';
+    show_sentence.innerHTML = 'You did great but I feel can do much better';
     typing_ground.value = ' ';
  }
 
  const errorChecking = (words) => {
-    //console.log(words);
-    
+    sentence_to_write = show_sentence.innerHTML; 
+    sentence_to_write = sentence_to_write.split(" ");
+    console.log(sentence_to_write); //sentence displayed
 
+    console.log(words); //sentence I typed
+    let num = 0;
+    for(let i = 0; i<words.length; i++){
+      if(words[i] === sentence_to_write[i]){
+          num++;
+      }
+    }
+    return num;
  }
 
-
  const calculateTypingSpeed = (time_taken) => {
-    let totalWords = typing_ground.value.trim(); 
-    let actualWordsNumber = totalWords === "" ? 0 : totalWords.split(" ").length;
+    let totalWords = typing_ground.value.trim(); //.trim() - start and end space removal
+    //let actualWordsNumber = totalWords === "" ? 0 : totalWords.split(" ").length;
     let actualWords = totalWords === "" ? 0 : totalWords.split(" ");
+    // console.log(totalWords);
+    // console.log(totalWords.split(" "));
     
-    actualwords = errorChecking(actualWords);
-
-    if(actualWordsNumber !== 0){
-      let typing_speed = (actualWordsNumber / time_taken) * 60;
+    actualWords = errorChecking(actualWords);
+    
+    if(actualWords !== 0){
+      let typing_speed = (actualWords / time_taken) * 60;
       typing_speed = Math.round(typing_speed);
-      score.innerHTML = `Your typing speed is ${typing_speed} words per minute, you wrote ${actualWordsNumber} words & took ${time_taken} sec for typing`;
+      score.innerHTML = `Your typing speed is ${typing_speed} words per minute, you wrote ${actualWords} correct words out of ${sentence_to_write.length} & took ${time_taken} sec for typing`;
     }
     else{
       score.innerHTML = `Your typing speed is 0 words per minute, and you took ${time_taken} sec basically doing nothing`
@@ -92,8 +102,6 @@
             //break;
       }
  })
-
-
-
+ 
 
 
