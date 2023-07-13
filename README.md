@@ -17,7 +17,7 @@ The project is still under development, and there are a number of features that 
 - ```Animations``` :  Animations can add visual interest and interactivity to your game. Some ideas for incorporating animations include: Typing animations, Victory animations, Transition animations etc.
 - ```Deployment``` :  Deploying the game online would allow multiple players to compete against each other in real-time, making the game more interesting.
 
-I'm always looking for ways to improve the game, so if you have any suggestions for new features, please feel free to submit a [pull request](https://github.com/vishalsingh2972/JS-Chess/pulls) for review. I'd love to hear your ideas!
+I'm always looking for ways to improve the game, so if you have any suggestions for new features, please feel free to submit a [pull request](https://github.com/vishalsingh2972/JS-TypingSpeedChecker/pulls) for review. I'd love to hear your ideas!
   
 ## Project Demo
 
